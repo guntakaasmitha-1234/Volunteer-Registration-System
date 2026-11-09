@@ -1,0 +1,155 @@
+/* Base Styles */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f4f7f6;
+    --text-color: #333;
+    --border-color: #ddd;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Layout */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* Cards & Forms */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-card {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn:hover { background-color: #004494; }
+
+.btn-logout {
+    background-color: var(--danger);
+    border: none;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-small {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.btn-success { background-color: var(--success); color: white; border: none;}
+.btn-danger { background-color: var(--danger); color: white; border: none;}
+
+/* Lists & Items */
+.list-item {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.list-item h4 { margin-bottom: 0.5rem; color: var(--primary-color); }
+.status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.status-pending { background-color: var(--warning); color: #333; }
+.status-approved { background-color: var(--success); }
+.status-rejected { background-color: var(--danger); }
+
+/* Search */
+.search-bar {
+    margin-bottom: 1rem;
+}
+.search-bar input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
